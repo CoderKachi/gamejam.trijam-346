@@ -1,4 +1,5 @@
 {
+    "version": 1,
     "name": "FrameworkInput",
     "maps": [
         {
@@ -6,9 +7,18 @@
             "id": "a6f40730-208a-47af-a340-e5bbd1b47a01",
             "actions": [
                 {
-                    "name": "Move",
+                    "name": "MoveHandLeft",
                     "type": "Value",
                     "id": "7a73e7c2-4e3d-4fc2-a86f-83cdbc2ca5e0",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "MoveHandRight",
+                    "type": "Value",
+                    "id": "ec7bb57b-cc53-43f2-8802-12483daccbd3",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
@@ -42,18 +52,9 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "ActionPrimaryModifier",
+                    "name": "ActionModifier",
                     "type": "Button",
                     "id": "446f6275-06db-40cb-9e17-63096682f3fe",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "SwapWeapon",
-                    "type": "Button",
-                    "id": "5d169776-d9b5-40a7-80de-f2dcbfc8f7ea",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -78,15 +79,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Reload",
-                    "type": "Button",
-                    "id": "800c6cc4-d71d-49c9-ad04-6f4fc5ce5f9b",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Scroll",
                     "type": "PassThrough",
                     "id": "965e388b-b08b-4d42-b85f-19dd9b78b5eb",
@@ -104,7 +96,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Move",
+                    "action": "MoveHandLeft",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -115,7 +107,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";MNK",
-                    "action": "Move",
+                    "action": "MoveHandLeft",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -126,7 +118,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";MNK",
-                    "action": "Move",
+                    "action": "MoveHandLeft",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -137,7 +129,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";MNK",
-                    "action": "Move",
+                    "action": "MoveHandLeft",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -148,7 +140,62 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";MNK",
-                    "action": "Move",
+                    "action": "MoveHandLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Arrow Keys",
+                    "id": "ec7571a2-0921-4b4a-873a-81725a6a5a66",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveHandRight",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "10ed62f0-b693-4fb6-85c7-a4ff147c8448",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";MNK",
+                    "action": "MoveHandRight",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "f208d9f4-2952-40a7-89c6-d197c4c426e7",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";MNK",
+                    "action": "MoveHandRight",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "6e187a9e-9558-4820-ae3f-cf29ee2a7ce7",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";MNK",
+                    "action": "MoveHandRight",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "85175148-808e-4e1f-a49a-7f72fb2e35b0",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";MNK",
+                    "action": "MoveHandRight",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -170,7 +217,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";MNK",
-                    "action": "ActionPrimaryModifier",
+                    "action": "ActionModifier",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -181,29 +228,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Gamepad",
-                    "action": "ActionPrimaryModifier",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "02704a8d-2239-4fd5-8f8a-16f6212fb30d",
-                    "path": "<Keyboard>/r",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";MNK",
-                    "action": "Reload",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "e18130fc-3488-407b-910f-95314ab34cfd",
-                    "path": "<Gamepad>/buttonWest",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Gamepad",
-                    "action": "Reload",
+                    "action": "ActionModifier",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -237,28 +262,6 @@
                     "processors": "",
                     "groups": ";MNK",
                     "action": "Look",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "75a8df83-2154-4920-9928-326ce01fc8fc",
-                    "path": "<Keyboard>/f",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";MNK",
-                    "action": "SwapWeapon",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "25b6d2ce-bfba-479c-92ba-3cd9b46f711e",
-                    "path": "<Gamepad>/buttonNorth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Gamepad",
-                    "action": "SwapWeapon",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
